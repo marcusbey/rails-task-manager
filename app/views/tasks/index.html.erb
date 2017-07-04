@@ -8,8 +8,11 @@
   <li><%= task.status ? "[X]" : "[ ]" %></li>
   <li><strong><%= task.name %></strong></li>
   <li><%= task.description %></li>
+  <li><%= task.updated_at %> </li>
   <li><%=link_to "Read", task_path(task) %></li>
+  <li><%=link_to "Done", done_path(task) %></li>
   <li><%= link_to "Delete", task_path(task), method: :delete %></li>
+
 </ul>
 
 <%end%>

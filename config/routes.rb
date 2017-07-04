@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :tasks
+  get '/tasks/:id/done', to: 'tasks#done', as: :done
 # get '/tasks', to: 'tasks#index'
 
 # get '/tasks/:id', to: 'tasks#show'
