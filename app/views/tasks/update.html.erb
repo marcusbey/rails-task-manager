@@ -1,0 +1,11 @@
+<h1>Tasks#update</h1>
+
+<%= form_for @task do |f| %>
+  <%= f.label :status %>
+  <%= f.label :name, "Your task" %>
+  <%= f.text_field :name %>
+  <%= f.label :description, "Description" %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
+

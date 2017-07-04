@@ -1,0 +1,11 @@
+<h1>Tasks#show</h1>
+
+<div class="tasks">
+  <ul>
+  <li><%= @task.status ? "[X]" : "[ ]" %></li>
+  <li><strong><%= @task.name %></strong></li>
+  <li><%= @task.description %></li>
+  </ul>
+</div>
+
+<%=link_to "Back to list", tasks_path%>

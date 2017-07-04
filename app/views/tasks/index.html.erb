@@ -1,0 +1,16 @@
+<h1>Tasks#index</h1>
+<p>Here are your tasks</p>
+
+<%= link_to "Add a new task", new_task_path %>
+
+<% @tasks.each do |task| %>
+<ul>
+  <li><%= task.status ? "[X]" : "[ ]" %></li>
+  <li><strong><%= task.name %></strong></li>
+  <li><%= task.description %></li>
+  <li><%=link_to "Read", task_path(task) %></li>
+  <li><%= link_to "Delete", task_path(task), method: :delete %></li>
+</ul>
+
+<%end%>
+
